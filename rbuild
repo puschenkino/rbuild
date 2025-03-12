@@ -539,11 +539,6 @@ main() {
         esac
     done
 
-    if (( EUID == 0 )) && ! "$RBUILD_AS_ROOT"
-    then
-        error $EXIT_RBUILD_AS_ROOT
-    fi
-
     if (( $# == 0))
     then
         usage
